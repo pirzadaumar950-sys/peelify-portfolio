@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cream" data-bg="glow">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F8F1E7">
+<link rel="icon" type="image/png" href="media/icon.png">
+<title>Peelify — video that gets watched, by Umar Pirzada</title>
+<meta name="description" content="Umar Pirzada makes talking-head reels, 3D animated videos, AI and UGC ads, Instagram design, websites and SEO. One person, the whole pipeline.">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="pre" aria-hidden="true">
+  <img src="media/icon.png" alt="">
+  <div class="pre-bar"><i></i></div>
+  <span class="label" id="pre-n">000</span>
+</div>
+
+<div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas id="dust" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div id="cur" aria-hidden="true"><span></span></div>
+
+<header class="top">
+  <a class="brand" href="#home" aria-label="Peelify home"><img src="media/logo.png" alt="Peelify" width="900" height="345"></a>
+  <nav class="nav glass" aria-label="Sections">
+    <a href="#need">Services</a>
+    <a href="#work">Work</a>
+    <a href="#design">Design</a>
+    <a href="#web">Web &amp; SEO</a>
+    <a href="#about">About</a>
+  </nav>
+  <div class="tools">
+    <button class="pill glass" id="look-btn" aria-expanded="false" aria-controls="look"><i class="swatch"></i><span>Look</span></button>
+    <a class="btn mag" href="#contact"><span>Hire me</span></a>
+    <button class="pill glass menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<div class="look glass" id="look" hidden>
+  <div class="look-row"><span class="label">Theme</span>
+    <div class="seg" id="theme-seg">
+      <button data-v="cream"><i style="background:#F8F1E7"></i>Cream</button>
+      <button data-v="black"><i style="background:#0B0B0B"></i>Black</button>
+      <button data-v="wine"><i style="background:#5B0F18"></i>Wine</button>
+    </div>
+  </div>
+  <div class="look-row"><span class="label">Background</span>
+    <div class="seg" id="bg-seg">
+      <button data-v="plain">Plain</button>
+      <button data-v="glow">Glow</button>
+      <button data-v="shards">Shards</button>
+    </div>
+  </div>
+  <div class="look-row"><span class="label">Sound</span>
+    <div class="seg" id="snd-seg">
+      <button data-v="off">Off</button>
+      <button data-v="on">Soft taps</button>
+    </div>
+  </div>
+</div>
+
+<div class="menu" id="menu" hidden>
+  <nav>
+    <a href="#need"><small>01</small>Services</a>
+    <a href="#work"><small>02</small>Work</a>
+    <a href="#design"><small>03</small>Design</a>
+    <a href="#web"><small>04</small>Web &amp; SEO</a>
+    <a href="#about"><small>05</small>About</a>
+    <a href="#reviews"><small>06</small>Reviews</a>
+    <a href="#contact"><small>07</small>Contact</a>
+  </nav>
+</div>
+
+<main id="home">
+
+<!-- HERO: phone that rotates into a cinema screen -->
+<section class="hero" id="hero">
+  <div class="stage">
+    <div class="words" aria-hidden="true">
+      <span class="w w-l">WATCH</span>
+      <span class="w-gap"></span>
+      <span class="w w-r">THIS.</span>
+    </div>
+    <h1 class="sr">Watch this. Video that gets watched, by Umar Pirzada.</h1>
+
+    <div class="tilt">
+      <div class="phone" id="phone">
+        <div class="screen">
+          <div class="layA">
+            <video src="media/reel.mp4" poster="media/reel.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+            <div class="lock">
+              <span class="island"></span>
+              <div class="lock-bot"><span class="label">Scroll to rotate</span><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4M20 12a8 8 0 0 1-14 5.3M4 20v-4h4"/></svg></div>
+            </div>
+          </div>
+          <div class="layB">
+            <div class="cine">
+              <figure><video src="media/loop_a.mp4" muted loop playsinline preload="none"></video><figcaption class="label">3D animation</figcaption></figure>
+              <figure><video src="media/loop_b.mp4" muted loop playsinline preload="none"></video><figcaption class="label">UGC ad</figcaption></figure>
+              <figure><video src="media/loop_c.mp4" muted loop playsinline preload="none"></video><figcaption class="label">3D promo</figcaption></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-copy">
+      <p class="lede">I’m Umar, and I make the videos your customers stop scrolling for.</p>
+      <div class="row">
+        <a class="btn mag" href="#work"><span>See the work</span></a>
+        <a class="btn ghost mag" href="#contact"><span>Say hello</span></a>
+      </div>
+    </div>
+
+    <div class="cine-cap">
+      <span class="label">Now showing: real client work</span>
+      <a class="btn mag" href="#work"><span>Open the full reel wall</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true"><div class="track" id="ticker"></div></div>
+
+<!-- NEED -->
+<section class="sec" id="need">
+  <div class="sec-head">
+    <h2 data-split>What do you need?</h2>
+    <p data-rise>Pick one. It takes you straight to that work.</p>
+  </div>
+  <div class="rows" id="rows"></div>
+  </section>
+
+<!-- WORK -->
+<section class="sec" id="work">
+  <div class="sec-head">
+    <h2 data-split>Selected work</h2>
+    <p data-rise>Drag the reel. The one in front plays, and a tap gives you sound.</p>
+  </div>
+  <div class="filters" id="filters" role="tablist" aria-label="Filter work"></div>
+  <div class="rail" id="rail" tabindex="0" aria-label="Video work. Drag, or use the arrow keys."></div>
+  <div class="rail-ui">
+    <button class="rnd" id="rail-prev" aria-label="Previous video"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="rail-cap"><b id="rail-title"></b><span class="label" id="rail-who"></span></div>
+    <button class="rnd" id="rail-next" aria-label="Next video"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <div class="rail-bar" aria-hidden="true"><i id="rail-bar"></i></div>
+</section>
+
+<!-- DESIGN -->
+<section class="sec dark" id="design">
+  <div class="sec-head">
+    <h2 data-split>I also run the feed.</h2>
+    <p data-rise>Posters, launch teasers and reels made for client feeds. Drag the ring to spin it, and tap a piece to open it.</p>
+  </div>
+  <div class="ring" id="ring" aria-label="Design work on a rotating ring. Drag to spin."><div class="ring-tilt"><div class="spin" id="spin"></div></div></div>
+  <p class="ring-cap"><b id="ring-title" aria-live="polite"></b></p>
+</section>
+
+<!-- WEB + SEO -->
+<section class="sec" id="web">
+  <div class="sec-head">
+    <h2 data-split>Then I build where it lands.</h2>
+    <p data-rise>A good ad needs somewhere good to send people, and a way to be found without paying for every click.</p>
+  </div>
+  <div class="duo">
+    <article class="panel" data-rise>
+      <span class="label">Websites and web apps</span>
+      <ul class="list">
+        <li><b>Cognyth</b><span>A full website redesign and a cognitive assessment quiz platform, built in React.</span></li>
+        <li><b>AdForge</b><span>My own AI tool that writes UGC ad scripts and prompts, with a WebGL interface.</span></li>
+        <li><b>Sawari</b><span>A school transport marketplace, built for a client in Lahore.</span></li>
+      </ul>
+      <a class="btn ghost mag" data-wa="Hi Umar, can you send me live links to the websites you've built?" target="_blank" rel="noopener"><span>Ask for live links</span></a>
+    </article>
+    
+  </div>
+  <article class="panel gsc" id="gsc" data-rise>
+    <header class="gsc-head">
+      <div>
+        <span class="label">Search report</span>
+        <h3>SEO, AEO and GEO, measured.</h3>
+      </div>
+      <span class="demo" title="Example numbers. A client report uses that client's own Search Console data.">Demo data</span>
+    </header>
+    <div class="gsc-ctl">
+      <div class="seg" id="gsc-chan" role="tablist" aria-label="Channel">
+        <button data-v="seo" role="tab">SEO</button>
+        <button data-v="aeo" role="tab">AEO</button>
+        <button data-v="geo" role="tab">GEO</button>
+      </div>
+      <div class="seg" id="gsc-range" role="tablist" aria-label="Time range">
+        <button data-v="7" role="tab">7 days</button>
+        <button data-v="30" role="tab">30 days</button>
+        <button data-v="90" role="tab">3 months</button>
+        <button data-v="365" role="tab">12 months</button>
+      </div>
+    </div>
+    <div class="gsc-cards" id="gsc-cards" role="tablist" aria-label="Metric"></div>
+    <div class="gsc-chart" id="gsc-chart">
+      <svg aria-hidden="true"></svg>
+      <div class="gsc-tip" id="gsc-tip" hidden></div>
+    </div>
+    <div class="gsc-legend">
+      <span><i class="k now"></i>This period</span>
+      <span><i class="k prev"></i>Previous period</span>
+      <span><i class="k trend"></i>Trend</span>
+    </div>
+    <div class="gsc-detail" id="gsc-detail" aria-live="polite"></div>
+    <p class="gsc-note">Laid out like Google Search Console, with AI answer tracking added. The numbers here are a demo; your report runs on your own property’s data.</p>
+    <a class="btn ghost mag" data-wa="Hi Umar, I'd like an SEO check on my site." target="_blank" rel="noopener"><span>Get a site check</span></a>
+  </article>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="about-grid">
+    <div class="about-copy">
+      <h2 data-split>Five jobs. One person.</h2>
+      <p class="lede" data-rise>Not an agency. I write it, generate it, edit it and ship it, so nothing gets lost between five freelancers.</p>
+      <div class="merge" id="merge" aria-hidden="true">
+        <span class="role">Script</span><span class="role">Design</span><span class="role">Animation</span><span class="role">Edit</span><span class="role">Sound</span>
+        <span class="one">One brief. Umar.</span>
+      </div>
+    </div>
+    <figure class="portrait" id="portrait" data-rise>
+      <div class="portrait-in" role="img" aria-label="Silhouette of Umar Pirzada"><i class="sil back"></i><i class="sil"></i></div>
+      <figcaption class="label">Umar Pirzada, founder of Peelify.ai. Based in Pakistan, GMT+5.</figcaption>
+    </figure>
+  </div>
+  <div class="stats">
+    <div data-rise><b>Top Rated</b><span class="label">on Upwork</span></div>
+    <div data-rise><b>100%</b><span class="label">Job Success Score</span></div>
+    <div data-rise><b>24h</b><span class="label">to a script and visual direction</span></div>
+    <div data-rise><b>3 formats</b><span class="label">9:16, 1:1 and 16:9 delivered</span></div>
+  </div>
+  <ol class="steps" id="steps">
+    <li data-rise><span class="label">Step 1</span><b>You send</b><p>Your product, your goal and any references you like.</p></li>
+    <li data-rise><span class="label">Step 2</span><b>You approve</b><p>A script and visual direction, before any footage is made.</p></li>
+    <li data-rise><span class="label">Step 3</span><b>You post</b><p>A finished video in every format you need.</p></li>
+  </ol>
+  <div class="ticker small" aria-hidden="true"><div class="track" id="tools"></div></div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="reviews">
+  <div class="sec-head">
+    <h2 data-split>In their words.</h2>
+    <p data-rise>Messages clients sent after seeing the work, as they wrote them.</p>
+  </div>
+  <div class="quotes" id="quotes"></div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec end" id="contact">
+  <h2 class="mega" data-split>Let’s roll.</h2>
+  <p class="lede" data-rise>Tell me what you’re selling. I’ll tell you which video will sell it.</p>
+  <div class="row cta">
+    <a class="btn big mag" data-wa="Hi Umar, I saw your portfolio and I'd like to talk about a project." target="_blank" rel="noopener"><span>Message me on WhatsApp</span></a>
+    <a class="btn ghost big mag" href="https://www.upwork.com/freelancers/~014c1430d38d81e7a2" target="_blank" rel="noopener"><span>Hire on Upwork</span></a>
+    <a class="btn ghost big mag" href="https://www.instagram.com/peelify.ai" target="_blank" rel="noopener"><span>@peelify.ai</span></a>
+  </div>
+  <p class="label phone-num">WhatsApp +92 322 6660052</p>
+  <footer class="foot">
+    <img src="media/icon.png" alt="Peelify mark">
+    <span class="label">© 2026 Peelify.ai, by Umar Pirzada</span>
+    <button class="bonus" id="bonus" title="Bonus reel" aria-label="Hidden bonus reel"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="6.5" r="1.4"/><circle cx="12" cy="17.5" r="1.4"/><circle cx="6.5" cy="12" r="1.4"/><circle cx="17.5" cy="12" r="1.4"/></svg></button>
+  </footer>
+</section>
+
+</main>
+
+<!-- PLAYER -->
+<div class="player" id="player" hidden role="dialog" aria-modal="true" aria-label="Project">
+  <button class="rnd x" id="p-x" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="p-wrap">
+    <div class="p-media" id="p-media"></div>
+    <div class="p-info">
+      <span class="label" id="p-n"></span>
+      <h3 id="p-title"></h3>
+      <p id="p-desc"></p>
+      <ul id="p-points"></ul>
+      <div class="tags" id="p-tags"></div>
+      <div class="row">
+        <a class="btn mag" id="p-cta" target="_blank" rel="noopener"><span>Want one like this?</span></a>
+        <button class="btn ghost" id="p-next"><span>Next</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<noscript><p style="padding:24px">This page needs JavaScript for its reel wall. Services: talking-head reels, 3D animated videos, AI and UGC ads, Instagram design, websites and SEO. WhatsApp +92 322 6660052.</p></noscript>
+<script src="gsap.min.js"></script>
+<script src="ScrollTrigger.min.js"></script>
+<script src="lenis.min.js"></script>
+<script src="app.js"></script>
+<script src="seo.js"></script>
+</body>
+</html>
